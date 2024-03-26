@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Asana Layer Blocker",
+    "version": "1.0",
+    "description": "Blocks specific layers in Asana.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["https://app.asana.com/*"],
+        "js": ["blockLayers.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  }
+  
